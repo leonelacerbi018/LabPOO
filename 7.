@@ -1,0 +1,20 @@
+class Banco:
+    def __init__(self, nombre, tasa_interes):
+        self.nombre = nombre
+        self.tasa_interes = tasa_interes
+
+    def calcular_interes(self, cantidad):
+        return cantidad * (self.tasa_interes / 100)
+
+    def calcular_tiempo_duplicar(self):
+        return 100 / self.tasa_interes
+
+mi_banco = Banco("Banco Central", 5)
+
+interes_obtenido = mi_banco.calcular_interes(1500)
+tiempo_necesario = mi_banco.calcular_tiempo_duplicar()
+
+print(f"Banco: {mi_banco.nombre}")
+print(f"Tasa de interés: {mi_banco.tasa_interes}%")
+print(f"Interés sobre 1500: {interes_obtenido}")
+print(f"Años para duplicar el capital: {tiempo_necesario}")
