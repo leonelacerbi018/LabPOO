@@ -1,0 +1,15 @@
+import datetime
+
+class Coche:
+    def __init__(self, marca, modelo, año_fabricacion):
+        self.marca = marca
+        self.modelo = modelo
+        self.año_fabricacion = año_fabricacion
+        
+    def obtener_antiguedad(self):
+        año_actual = datetime.datetime.now().year
+        return año_actual - self.año_fabricacion
+
+mi_coche = Coche("Toyota", "Corolla", 2015)
+años = mi_coche.obtener_antiguedad()
+print(f"El coche es un {mi_coche.marca}{mi_coche.modelo} y tiene {años} años de antigüedad.")
